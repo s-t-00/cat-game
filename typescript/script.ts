@@ -13,19 +13,12 @@ window.onload = function () {
     const pImgs = Loader.ImageLoader(game);
     const pMscs = Loader.SoundLoader(game);
 
-    // let score = 0; 
-    // score >=0;
-    // score >= 0;
 
 
 
 
 
     game.onload = function () {
-
-
-
-
 
         const setScene = function (sceneNum: number) {
             const scene = new Scene();
@@ -80,7 +73,6 @@ window.onload = function () {
                           this.tl.moveBy(0, -100, 40, enchant.Easing.BOUNCE_EASEOUT)
                                .moveBy(0, 100, 40)                            
     
-                        //   showLabel(); // スコアを反映
                           // MEMO: テキストバウンドモジュールを使用する例
                           const label = parts.TextBound("-40", this.x, this.y, 32, "orange", 60);
                           scene.addChild(label);
@@ -92,17 +84,11 @@ window.onload = function () {
 
                         }
                         showLabel(); // スコアを反映
-
-                        // if(score<100){
-                        //     setScene(0);
-                        // }
-
                     }
 
 
 
                     {
-
                         // ボタン作成２
                         const btn2 = parts.Button("シーチキンをあげる");
                         btn2.moveTo(10, 230);
@@ -112,33 +98,17 @@ window.onload = function () {
     
                             if(score>0 && score<100){
                               game.assets[pMscs[1]].clone().play(); //音を鳴らす
-                            //   score-=40; // グローバル変数のスコアを40減らす
-    
                               this.tl.moveBy(0, -150, 40, enchant.Easing.BOUNCE_EASEOUT)
                                    .moveBy(0, 150, 40
-                            //   showLabel(); // スコアを反映
-                              // MEMO: テキストバウンドモジュールを使用する例
-                            //   const label = parts.TextBound("-40", this.x, this.y, 32, "orange", 60);
                               ,scene.addChild(label));
-    
-    
-                            //   if(score<0){
                                 score=0;
-                            //   }
-    
                             }
-                            showLabel(); // スコアを反映
-    
-                            // if(score<100){
-                            //     setScene(0);
-                            // }
-    
+                            showLabel(); // スコアを反映    
                         }
                     }
     
 
                     {
-
                         // ボタン作成３
                         const btn3 = parts.Button("遊ぶ");
                         btn3.moveTo(200, 180);
@@ -162,71 +132,35 @@ window.onload = function () {
     
                             game.assets[pMscs[1]].clone().play(); //音を鳴らす
                             score+=10; // グローバル変数のスコアを10増やす
-                            // showLabel(); // スコアを反映
                             // MEMO: テキストバウンドモジュールを使用する例
                             const label = parts.TextBound("+10", this.x, this.y, 32, "blue", 60);
                             scene.addChild(label);
-    
-    
-                                // var text = new Text("Hello,World!");
-                                // console.log('hello world');
-                                // var printIn=function(str){
-                                //     document.write(str);
-                                //     document.write("ハラヘリ!");
-                                //     document.body.style.backgroundColor="#ccffcc";
-                                // };
-                            //     // alert("ハラヘリ");
-                            //     // function error(mes){
-                            //     //     alert("Error:エラーが発生しました。\nメッセージ:\n" + mes);
-                                
-                            
-    
+        
                                 if ( score >= 100 ) {
                                     score=100;
                                     
-    
                                    back.onenterframe = function () {
                                    this.time++;
                                    this.x += Math.sin(this.time / 0.5) * 8;
                                    this.y += Math.cos(this.time / 0.5) * 8;
                                 
-                                
                                    }
                                 }
                                 showLabel(); // スコアを反映
-                            
-                            }}
                             }
-                        
-                        
-    
-    
-                        
-                        
                         }
+                        }                        
+                        }
+
+
+
+
+
+
+
+
+
                     {    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    
                         let score = 0; // 二つ目のスコア
 
 
@@ -268,7 +202,6 @@ window.onload = function () {
                           this.tl.moveBy(0, -100, 40, enchant.Easing.BOUNCE_EASEOUT)
                                .moveBy(0, 100, 40)                            
     
-                        //   showLabel(); // スコアを反映
                           // MEMO: テキストバウンドモジュールを使用する例
                           const label2 = parts.TextBound("-40", this.x, this.y, 32, "orange", 60);
                           scene.addChild(label2);
@@ -277,28 +210,21 @@ window.onload = function () {
                           if(score<0){
                             score=0;
                           }
-                        
-
                         }
                         showLabel(); // スコアを反映
 
                     }
+
+
+
+
+
+
+
+
+
+
                     {
-                    
-                    
-                
-
-
-
-
-
-
-
-
-
-
-
-
                     // ボタン作成２
                     const btn2 = parts.Button("シーチキンをあげる");
                     btn2.moveTo(10, 550);
@@ -312,37 +238,22 @@ window.onload = function () {
 
                           this.tl.moveBy(0, -150, 40, enchant.Easing.BOUNCE_EASEOUT)
                                .moveBy(0, 150, 40
-                        //   showLabel(); // スコアを反映
-                          // MEMO: テキストバウンドモジュールを使用する例
-                        //   const label = parts.TextBound("-40", this.x, this.y, 32, "orange", 60);
                           ,scene.addChild(label));
 
-
-                        //   if(score<0){
                             score=0;
-                        //   }
-
                         }
                         showLabel(); // スコアを反映
-
-                        // if(score<100){
-                        //     setScene(0);
-                        // }
+                    }
                     }
 
-                    }
+
+
+
+
+
+
+
                     {
-                
-                
-
-
-
-
-
-
-
-
-
                     // ボタン作成３
                     const btn3 = parts.Button("遊ぶ");
                     btn3.moveTo(200, 500);
@@ -366,34 +277,17 @@ window.onload = function () {
 
                         game.assets[pMscs[1]].clone().play(); //音を鳴らす
                         score+=10*2; // グローバル変数のスコアを10*2増やす
-                        // showLabel(); // スコアを反映
                         // MEMO: テキストバウンドモジュールを使用する例
                         const label = parts.TextBound("+20", this.x, this.y, 32, "blue", 60);
-                        scene.addChild(label);
-
-
-                            // var text = new Text("Hello,World!");
-                            // console.log('hello world');
-                            // var printIn=function(str){
-                            //     document.write(str);
-                            //     document.write("ハラヘリ!");
-                            //     document.body.style.backgroundColor="#ccffcc";
-                            // };
-                        //     // alert("ハラヘリ");
-                        //     // function error(mes){
-                        //     //     alert("Error:エラーが発生しました。\nメッセージ:\n" + mes);
-                            
+                        scene.addChild(label);                            
                         
-
                             if ( score >= 100 ) {
                                 score=100;
                                 
-
                                back.onenterframe = function () {
                                this.time++;
                                this.x += Math.sin(this.time / 0.5) * 8;
                                this.y += Math.cos(this.time / 0.5) * 8;
-                            
                             
                                }
                             }
@@ -404,7 +298,7 @@ window.onload = function () {
 
 
 
-                    // break;
+                    break;
                     }
             }
         }
